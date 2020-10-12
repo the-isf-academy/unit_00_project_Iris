@@ -1,6 +1,6 @@
 # unit_00_project_Iris
 
-This code was authored by Iris Wong (CS9, 2019) and adapted to include animations. She drew Winwin from NCT and decided to do Winwin's side profile drawing with his name in block letters.
+This code was authored by Iris Wong (CS9, 2019) for her unit 0 drawing project. The CS teaching team adapted to include animations. She drew Winwin from NCT and decided to do Winwin's side profile drawing with his name in block letters.
 
 ## How To Use
 Uh oh! This part of the README.md is missing. Can you work with your group to figure it out?
