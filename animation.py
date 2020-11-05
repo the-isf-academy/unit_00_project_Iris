@@ -27,7 +27,7 @@ def draw_stationary():
         forward(50 * settings.sf)
         pendown()
 
-def animate():
+def draw_animation():
     for i in range(70):
         if (i == 10):
             letter_w(settings.sf)
@@ -49,8 +49,7 @@ def main():
     for i in range(settings.loop_num):
         setup(0,0)
         draw_stationary()
-        animate()
-    # create_gif(duration) #TO DO
+        draw_animation()
     input("Press enter...")
 
 if __name__ == '__main__':
