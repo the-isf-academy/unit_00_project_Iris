@@ -12,10 +12,10 @@ def set_initial_position(sf):
     right(110)
     pendown()
 
-def draw_figure(sf):
+def draw_figure(sf, shirt_color):
 #draw shirt
     #color fill shirt
-    fillcolor(settings.shirt_color)
+    fillcolor(shirt_color)
     begin_fill()
 
     #shirt left rise

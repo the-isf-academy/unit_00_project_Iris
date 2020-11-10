@@ -1,3 +1,7 @@
-sf = 1.5
-loop_num = 3
-shirt_color = "#00CED1"
+SIZEFACTOR = 1.5
+NUMREPEATS = 3
+NUMFRAMES = 100
+SLEEPTIME = 0.05
+SHIRT_COLOR = "#00CED1"
+START_X = 0
+START_Y = 0

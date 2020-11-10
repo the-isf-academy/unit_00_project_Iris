@@ -1,56 +1,46 @@
 import time
 from turtle import *
-from helpers import no_delay, restore_state_when_finished
+from helpers import no_delay, restore_state_when_finished, setup
 from figure import draw_figure, set_initial_position
 from letters import letter_i, letter_n, letter_w
 import settings
 
-screen = Screen()
-screen.setup(800,800)
 
-def setup(x, y):
-    '''Sets up the turtle, ready to draw,
-    at the given coordinates'''
-    penup()
-    goto(x, y)
-    pendown()
-    speed(0)
-    hideturtle()
-    tracer(0)
-    setheading(0)
 
-def draw_stationary():
+def draw_stationary(sf, shirt_color):
     with no_delay():
-        set_initial_position(settings.sf)
-        draw_figure(settings.sf)
+        set_initial_position(sf)
+        draw_figure(sf, shirt_color)
         penup()
-        forward(50 * settings.sf)
+        forward(50 * sf)
         pendown()
 
-def draw_animation():
-    for i in range(70):
+def draw_animation(num_frames, sf, sleeptime):
+    for i in range(num_frames):
         if (i == 10):
-            letter_w(settings.sf)
+            letter_w(sf)
         if (i == 20):
-            letter_i(settings.sf)
+            letter_i(sf)
         if (i == 30):
-            letter_n(settings.sf)
+            letter_n(sf)
         if (i == 40):
-            letter_w(settings.sf)
+            letter_w(sf)
         if (i == 50):
-            letter_i(settings.sf)
+            letter_i(sf)
         if (i == 60):
-            letter_n(settings.sf)
+            letter_n(sf)
         screen.update()
-        time.sleep(0.05)
+        time.sleep(sleeptime)
     clear()
 
 def main():
-    for i in range(settings.loop_num):
-        setup(0,0)
-        draw_stationary()
-        draw_animation()
+    for i in range(settings.NUMREPEATS):
+        setup(settings.START_X,settings.START_Y)
+        draw_stationary(settings.SIZEFACTOR, settings.SHIRT_COLOR)
+        draw_animation(settings.NUMFRAMES, settings.SIZEFACTOR,settings.SLEEPTIME)
     input("Press enter...")
 
 if __name__ == '__main__':
+    screen = Screen()
+    screen.setup(800,800)
     main()
