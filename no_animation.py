@@ -7,7 +7,8 @@ from letters import winwin_letters
 from helpers import no_delay
 import settings
 
-size_factor = settings.sf
+size_factor = settings.SIZEFACTOR
+shirt_color = settings.SHIRT_COLOR
 
 
 def main():
@@ -15,7 +16,7 @@ def main():
     with no_delay():
         #draw figure
         set_initial_position(size_factor)
-        draw_figure(size_factor)
+        draw_figure(size_factor, shirt_color)
 
         #moving to the letters
         penup()
