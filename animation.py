@@ -3,7 +3,7 @@ from turtle import *
 from helpers import no_delay, restore_state_when_finished, setup
 from figure import draw_figure, set_initial_position
 from letters import letter_i, letter_n, letter_w
-from settings import SIZEFACTOR, SHIRT_COLOR, START_X, START_Y, NUMREPEATS, NUMFRAMES, SLEEPTIME
+import settings
 
 def draw_stationary(sf, shirt_color):
     with no_delay():
@@ -32,10 +32,10 @@ def draw_animation(num_frames, sf, sleeptime):
     clear()
 
 def main():
-    for i in range(NUMREPEATS):
-        setup(START_X,START_Y)
-        draw_stationary(SIZEFACTOR, SHIRT_COLOR)
-        draw_animation(NUMFRAMES, SIZEFACTOR, SLEEPTIME)
+    for i in range(settings.NUMREPEATS):
+        setup(settings.START_X,settings.START_Y)
+        draw_stationary(settings.SIZEFACTOR, settings.SHIRT_COLOR)
+        draw_animation(settings.NUMFRAMES, settings.SIZEFACTOR, settings.SLEEPTIME)
     input("Press enter...")
 
 if __name__ == '__main__':
