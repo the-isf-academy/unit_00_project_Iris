@@ -4,27 +4,25 @@
 from turtle import right, forward, penup, pendown, hideturtle
 from figure import draw_figure, set_initial_position
 from letters import winwin_letters
-from helpers import no_delay
-import settings
-
-size_factor = settings.SIZEFACTOR
-shirt_color = settings.SHIRT_COLOR
-
+from helpers import no_delay, setup
+from settings import SIZEFACTOR, SHIRT_COLOR, START_X, START_Y
 
 def main():
     hideturtle()
+    setup(START_X,START_Y)
+
     with no_delay():
         #draw figure
-        set_initial_position(size_factor)
-        draw_figure(size_factor, shirt_color)
+        set_initial_position(SIZEFACTOR)
+        draw_figure(SIZEFACTOR, SHIRT_COLOR)
 
         #moving to the letters
         penup()
-        forward(50 * size_factor)
+        forward(50 * SIZEFACTOR)
         pendown()
 
         #draw letters
-        winwin_letters(size_factor)
+        winwin_letters(SIZEFACTOR)
         input("Press enter...")
 
 
