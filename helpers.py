@@ -9,14 +9,12 @@ from itertools import chain, cycle
 def setup(x, y):
     '''Sets up the turtle, ready to draw,
     at the given coordinates'''
-    penup()
-    goto(x, y)
-    pendown()
+    fly(x, y)
     speed(0)
     hideturtle()
     setheading(0)
     tracer(0)
-    
+
 def fly(x,y):
     "Moves forward `distance` without drawing."
     penup()
